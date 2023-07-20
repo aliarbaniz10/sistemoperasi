@@ -11,22 +11,22 @@ j_beras = 10000*beras
 j_kecap = 2000*kecap
 j_telor = 2500*telor
 j_cabai = 3000*cabai
-j_bumbu = 8000*bumbu racik
+j_bumbu = 8000*bumbu
 j_minyak = 10000*minyak
 
 #belanja
-belonjo = (j_beras+j_kecap+j_telor+j_cabai+j_bumbu+j_minyak)
+belanja = (j_beras+j_kecap+j_telor+j_cabai+j_bumbu+j_minyak)
 
 #diskon
-if belonjo > 100000:
-  diskon = belonjo*0.5
+if belanja > 100000:
+  diskon = belanja*0.2
 else:
   diskon = 0 
 f_diskon = f"{diskon:.2f}".rstrip("0").rstrip(".")
 
-#total rego
-rego = belonjo-diskon
-f_rego = f"{rego:.2f}".rstrip("0").rstrip(".")
+#total harga
+harga = belanja-diskon
+f_harga = f"{harga:.2f}".rstrip("0").rstrip(".")
 
 #tampilane
 print ("        TOKO_RIFQI/10/(081)30303030     ")
@@ -40,18 +40,18 @@ print ("---------------------------------------------")
 print ("")
 print ("No | NamaProduk  | Qty |  Harga   | Jumlah ")
 print ("")
-print ("1. beras         ",beras,"   Rp 10.000 ","","Rp",j_beras)
-print ("2. kecap           ",kecap,"   Rp 2.000 ","","Rp",j_kecap)
-print ("3. telor          ",telor,"   Rp 2.500"," ","Rp",j_telor)
-print ("4. cabai          ",cabai,"   Rp 5.000","","Rp",j_cabai)
-print ("5. bumbu         ",bumbu,"   Rp 8.000"," ","Rp",j_bumbu)
-print ("6. minyak          ",minyak,"   Rp 10.000"," ","Rp",j_minyak)
+print ("1. beras       ",beras,"   Rp 10.000 ","","Rp",j_beras)
+print ("2. kecap       ",kecap,"   Rp 2.000 ","","Rp",j_kecap)
+print ("3. telor       ",telor,"   Rp 2.500"," ","Rp",j_telor)
+print ("4. cabai       ",cabai,"   Rp 5.000","","Rp",j_cabai)
+print ("5. bumbu       ",bumbu,"   Rp 8.000"," ","Rp",j_bumbu)
+print ("6. minyak      ",minyak,"   Rp 10.000"," ","Rp",j_minyak)
 print ("                   --------------------------")
 print ("                   Total Belanja : Rp",belanja)
 print ("                   Diskon        : Rp",f_diskon)
 print ("                   --------------------------",)
 print ("")
-print ("                   Total Harga   : Rp",f_rego)
+print ("                   Total Harga   : Rp",f_harga)
 
 #bayar
 bayar = int(input("                   Bayar         : Rp "))
@@ -61,10 +61,10 @@ while bayar < harga:
   
 #kembali
 kembalian = bayar-harga
-f_sosok = f"{sosok:.2f}".rstrip("0").rstrip(".")
+f_kembalian = f"{kembalian:.2f}".rstrip("0").rstrip(".")
 
 print ("                   Kembalian     : Rp",f_kembalian)
 print ("")
 print ("")
 print ("")
-print ("             TERIMAKASIH ' ")z
+print ("             TERIMAKASIH ' ")
